@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const ejs = require('ejs');
 const pageRoute = require('./routes/pageRoute');
+const photoRoute = require('./routes/photoRoute');
 
 const app = express();
 
@@ -12,9 +13,23 @@ app.set('view engine','ejs');
 
 //Middlewears
 app.use(express.static('public'));
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
 
 //Routes
 app.use('/', pageRoute);
+
+
+//
+//app.use('/photos',photoRoute);
+app.get('/add',(req, res) => {
+    res.render('add');
+})
+
+app.post('/photos',(req, res) => {
+    console.log(req.body);
+    res.redirect('/')
+})
 
 
 

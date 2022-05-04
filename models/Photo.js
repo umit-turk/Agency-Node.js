@@ -12,5 +12,7 @@ const PhotoSchema = new Schema({
     },
 });
 
+
+//'Photo' stringinin mongoose bizim adımıza photo collectionu oluşturuyor.
 const Photo = mongoose.model('Photo',PhotoSchema);
 module.exports = Photo;
