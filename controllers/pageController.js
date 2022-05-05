@@ -1,25 +1,23 @@
 const Photo = require('../models/Photo');
 
-exports.getIndexPage =  (req, res) => {
-    res.status(200).render('index', {
-        page_name: "index",
-    })
-}
+exports.getIndexPage = async (req, res) => {
+  const photos = await Photo.find({})
+  res.status(200).render("index", {
+    photos,
+  });
+};
 
 exports.getAboutPage = (req, res) => {
-    res.status(200).render("about", {
-      page_name: "about",
-    });
-  };
+  res.status(200).render("about");
+};
 
-exports.getServicesPage =  (req, res) => {
-    res.status(200).render('services', {
-        page_name: "services",
-    });
-}
+exports.getServicesPage = (req, res) => {
+  res.status(200).render("services");
+};
 
 exports.getTeamPage = (req, res) => {
-    res.status(200).render('team', {
-        page_name: "team",
-    });
-}
+  res.status(200).render("team");
+};
+exports.addPhotoPage = (req, res) => {
+  res.status(200).render("add");
+};

@@ -939,42 +939,42 @@ progress {
 
   .col-sm-1 {
     flex: 0 0 auto;
-    width: 8.33333333%;
+    width: 100%;
   }
 
   .col-sm-2 {
     flex: 0 0 auto;
-    width: 16.66666667%;
+    width: 100%;
   }
 
   .col-sm-3 {
     flex: 0 0 auto;
-    width: 25%;
+    width: 100%;
   }
 
   .col-sm-4 {
     flex: 0 0 auto;
-    width: 33.33333333%;
+    width: 100%;
   }
 
   .col-sm-5 {
     flex: 0 0 auto;
-    width: 41.66666667%;
+    width: 100%;
   }
 
   .col-sm-6 {
     flex: 0 0 auto;
-    width: 50%;
+    width: 100%;
   }
 
   .col-sm-7 {
     flex: 0 0 auto;
-    width: 58.33333333%;
+    width: 100%;
   }
 
   .col-sm-8 {
     flex: 0 0 auto;
-    width: 66.66666667%;
+    width: 100%;
   }
 
   .col-sm-9 {
@@ -1340,7 +1340,7 @@ progress {
 
   .row-cols-lg-3 > * {
     flex: 0 0 auto;
-    width: 33.3333333333%;
+    width: 100%;
   }
 
   .row-cols-lg-4 > * {
@@ -1380,7 +1380,7 @@ progress {
 
   .col-lg-4 {
     flex: 0 0 auto;
-    width: 33.33333333%;
+    width: 100%;
   }
 
   .col-lg-5 {

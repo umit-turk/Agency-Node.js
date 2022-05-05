@@ -4,6 +4,7 @@ const photoController = require('../controllers/photoController');
 
 const router = express.Router();
 
-router.route('/photos').post(photoController.createPhoto);
+router.route('/').post(photoController.createPhoto);
+router.route('/:id').get(photoController.getPhoto);
 
 module.exports = router;
