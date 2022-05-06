@@ -1,7 +1,7 @@
 const Photo = require('../models/Photo');
 
 exports.getIndexPage = async (req, res) => {
-  const photos = await Photo.find({})
+  const photos = await Photo.find({}).sort('-dataCreated')
   res.status(200).render("index", {
     photos,
   });
