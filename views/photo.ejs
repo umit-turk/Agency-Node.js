@@ -22,8 +22,22 @@
                         <div class="portfolio-caption-subheading text-muted"><%= photo.description %></div>
                     </div>
                 </div>
-              
+                
             </div>
+
+            <div class="col-xl-4 col-lg-5">
+                <!-- Share box -->
+                <div class="tm-bg-gray tm-share-box">
+                    <div class="text-center">
+                        <a href="/photos/edit/<%= photo._id %>" class="btn btn-primary p-0 mb-4 tm-btn-animate tm-btn-download tm-icon-download"><span>Update Details</span></a>	
+                    </div>	
+                    <div class="text-center">
+                        <a href="#" class="btn btn-danger p-0 tm-btn-animate tm-btn-download tm-icon-download"
+                           ><span>Delete Photo</span></a>	
+                    </div>								
+                </div>
+            </div>
+            
         </div>
     </div>
 </section>
