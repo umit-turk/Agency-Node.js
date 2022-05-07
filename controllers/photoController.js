@@ -21,6 +21,14 @@ exports.createPhoto = async (req, res) => {
   });
 };
 
+exports.getPhoto = async (req, res) => {
+  const photo = await Photo.findById(req.params.id);
+  res.render("photo", {
+    photo,
+  });
+};
+
+
 exports.getEditPhoto = async (req, res) => {
   const photo = await Photo.findOne({ _id: req.params.id });
   res.render("edit", {
@@ -37,9 +45,10 @@ exports.getUpdatePhoto = async (req, res) => {
   res.redirect(`/photos/${req.params.id}`);
 };
 
-exports.getPhoto = async (req, res) => {
-  const photo = await Photo.findById(req.params.id);
-  res.render("photo", {
-    photo,
-  });
-};
+exports.deletePhoto = async (req, res) => {
+const photo = await Photo.findOne({_id: req.params.id});
+let deletedImage = __dirname + "/../public" + photo.image
+fs.unlinkSync(deletedImage);
+await Photo.findByIdAndRemove(req.params.id);
+res.redirect('/');
+}

@@ -19,7 +19,9 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(fileUpload());
-app.use(methodOverride('_method'))
+app.use(methodOverride('_method', {
+  methods: ['POST', 'GET']
+}))
 
 //Routes
 app.use("/", pageRoute);
